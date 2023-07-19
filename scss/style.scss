@@ -1,0 +1,49 @@
+@import 'colors';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #4c2a85;
+	font-family: 'Tektur', cursive;
+
+	.container {
+		width: 750px;
+		height: 550px;
+		background-color: #6b7fd7;
+
+		.menu {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			height: 50px;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			line-height: 50px;
+			font-weight: bold;
+
+			&_option {
+				height: 100%;
+				width: 250px;
+				transition: color 0.3s linear;
+
+				&:hover {
+					color: white;
+					cursor: pointer;
+				}
+			}
+
+			.active {
+				background: linear-gradient(180deg, rgba(107, 127, 215, 1) 30%, rgba(188, 237, 246, 1) 100%);
+			}
+		}
+	}
+}
