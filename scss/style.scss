@@ -36,13 +36,14 @@ body {
 				transition: color 0.3s linear;
 
 				&:hover {
-					color: white;
+					color: #DDFBD2;
 					cursor: pointer;
 				}
 			}
 
 			.active {
-				background: linear-gradient(180deg, rgba(107, 127, 215, 1) 30%, rgba(188, 237, 246, 1) 100%);
+				background: linear-gradient(0deg, rgba(107, 127, 215, 1) 80%, #DDFBD2 100%);
+				color: #DDFBD2;
 			}
 		}
 	}

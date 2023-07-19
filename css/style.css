@@ -34,9 +34,10 @@ body .container .menu_option {
   transition: color 0.3s linear;
 }
 body .container .menu_option:hover {
-  color: white;
+  color: #DDFBD2;
   cursor: pointer;
 }
 body .container .menu .active {
-  background: linear-gradient(180deg, rgb(107, 127, 215) 30%, rgb(188, 237, 246) 100%);
+  background: linear-gradient(0deg, rgb(107, 127, 215) 80%, #DDFBD2 100%);
+  color: #DDFBD2;
 }/*# sourceMappingURL=style.css.map */
