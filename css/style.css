@@ -13,7 +13,7 @@ body {
   font-family: "Tektur", cursive;
 }
 body .container {
-  width: 750px;
+  width: 550px;
   height: 550px;
   background-color: #6b7fd7;
 }
@@ -28,16 +28,81 @@ body .container .menu {
   line-height: 50px;
   font-weight: bold;
 }
-body .container .menu_option {
+body .container .menu_tab {
   height: 100%;
   width: 250px;
   transition: color 0.3s linear;
 }
-body .container .menu_option:hover {
-  color: #DDFBD2;
+body .container .menu_tab:hover {
+  color: #ddfbd2;
   cursor: pointer;
 }
 body .container .menu .active {
-  background: linear-gradient(0deg, rgb(107, 127, 215) 80%, #DDFBD2 100%);
-  color: #DDFBD2;
+  background: linear-gradient(0deg, rgb(107, 127, 215) 80%, #ddfbd2 100%);
+  color: #ddfbd2;
+}
+body .container .content {
+  height: 500px;
+}
+body .container .content .tab_title {
+  padding: 20px 0;
+  font-size: 36px;
+}
+body .container .content .currency {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 80%;
+}
+body .container .content .currency_input {
+  font-size: 24px;
+}
+body .container .content .currency_input p {
+  padding: 10px 0;
+}
+body .container .content .currency_input input {
+  height: 36px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+}
+body .container .content .currency_select {
+  margin: 20px 0;
+}
+body .container .content .currency_select i {
+  width: 30px;
+  height: 30px;
+}
+body .container .content .currency_select select {
+  width: 100px;
+  height: 30px;
+}
+body .container .content .currency button {
+  width: 250px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: #ddfbd2;
+  border: none;
+  border-radius: 10px;
+}
+body .container .content .currency_output {
+  width: 250px;
+}
+body .container .content .margin h2 {
+  padding: 25px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+body .container .content .margin_rates {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+body .container .content .margin {
+  display: none;
+}
+body .container .content .logistics {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

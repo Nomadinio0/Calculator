@@ -15,7 +15,7 @@ body {
 	font-family: 'Tektur', cursive;
 
 	.container {
-		width: 750px;
+		width: 550px;
 		height: 550px;
 		background-color: #6b7fd7;
 
@@ -30,20 +30,104 @@ body {
 			line-height: 50px;
 			font-weight: bold;
 
-			&_option {
+			&_tab {
 				height: 100%;
 				width: 250px;
 				transition: color 0.3s linear;
 
 				&:hover {
-					color: #DDFBD2;
+					color: #ddfbd2;
 					cursor: pointer;
 				}
 			}
 
 			.active {
-				background: linear-gradient(0deg, rgba(107, 127, 215, 1) 80%, #DDFBD2 100%);
-				color: #DDFBD2;
+				background: linear-gradient(0deg, rgba(107, 127, 215, 1) 80%, #ddfbd2 100%);
+				color: #ddfbd2;
+			}
+		}
+
+		.content {
+			height: 500px;
+
+			.tab_title {
+				padding: 20px 0;
+				font-size: 36px;
+			}
+
+			.currency {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				text-align: center;
+				height: 80%;
+
+				&_input {
+					font-size: 24px;
+
+					p {
+						padding: 10px 0;
+					}
+
+					input {
+						height: 36px;
+						width: 250px;
+						border-radius: 10px;
+						border: none;
+					}
+				}
+
+				&_select {
+					margin: 20px 0;
+					i {
+						width: 30px;
+						height: 30px;
+					}
+					select {
+						width: 100px;
+						height: 30px;
+					}
+				}
+
+				button {
+					width: 250px;
+					height: 40px;
+					text-transform: uppercase;
+					background-color: #ddfbd2;
+					border: none;
+					border-radius: 10px;
+				}
+
+				&_output {
+					width: 250px;
+				}
+			}
+
+			.margin {
+				h2 {
+					padding: 25px 0;
+					text-align: center;
+					text-transform: uppercase;
+				}
+
+				&_rates {
+					display: flex;
+					justify-content: space-around;
+					text-align: center;
+
+					&_box {
+						// width: 25%;
+					}
+				}
+			}
+
+			.margin {
+				display: none;
+			}
+
+			.logistics {
+				display: none;
 			}
 		}
 	}

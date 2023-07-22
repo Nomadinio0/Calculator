@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <script src="https://kit.fontawesome.com/c54bc96960.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap" rel="stylesheet">
@@ -14,16 +15,55 @@
 <body>
     <div class="container">
         <div class="menu">
-            <div class="menu_option active">
+            <div class="menu_tab active">
                 <p>Currency</p>
             </div>
-            <div class="menu_option ">
+            <div class="menu_tab">
                 <p>Margin</p>
             </div>
-            <div class="menu_option ">
+            <div class="menu_tab">
                 <p>Logistics</p>
             </div>
         </div>
+        <div class="content">
+            <div class="currency">
+                <h2 class="tab_title">Currency converter</h2>
+                <div class="currency_input">
+                    <p>Amount</p>
+                    <input type="text" name="amount">
+                </div>
+                <div class="currency_select">
+                    <select name="from" id="from"></select>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <select name="to" id="to"></select>
+                </div>
+                <div class="currency_button">
+                    <button>Convert</button>
+                </div>
+                <div class="currency_output">
+                    <p>Score</p>
+                </div>
+            </div>
+            <div class="margin">
+                <h2>Exchange rates</h2>
+                <div class="margin_rates">
+                    <div class="margin_rates_box eur">
+                        <p>EUR</p>
+                        <p>value</p>
+                    </div>
+                    <div class="margin_rates_box usd">
+                        <p>USD</p>
+                        <p>value</p>
+                    </div>
+                    <div class="margin_rates_box gbp">
+                        <p>GBP</p>
+                        <p>value</p>
+                    </div>
+                </div>
+            </div>
+            <div class="logistics"></div>
+        </div>
+
     </div>
     <!-- <footer></footer> -->
     <script src="/js/main.js"></script>
