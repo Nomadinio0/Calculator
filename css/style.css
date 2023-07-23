@@ -73,11 +73,12 @@ body .container .content .currency_select {
 }
 body .container .content .currency_select i {
   width: 30px;
-  height: 30px;
+  cursor: pointer;
 }
 body .container .content .currency_select select {
   width: 100px;
-  height: 30px;
+  height: 36px;
+  border-radius: 5px;
 }
 body .container .content .currency button {
   width: 250px;
@@ -86,6 +87,7 @@ body .container .content .currency button {
   background-color: #ddfbd2;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 body .container .content .currency_output {
   width: 250px;

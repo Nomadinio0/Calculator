@@ -30,18 +30,18 @@
                 <h2 class="tab_title">Currency converter</h2>
                 <div class="currency_input">
                     <p>Amount</p>
-                    <input type="text" name="amount">
+                    <input type="text" name="amount" id="amount">
                 </div>
                 <div class="currency_select">
                     <select name="from" id="from"></select>
-                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <i class="fa-solid fa-arrows-rotate" id="swap_button"></i>
                     <select name="to" id="to"></select>
                 </div>
                 <div class="currency_button">
-                    <button>Convert</button>
+                    <button id="submit_button">Convert</button>
                 </div>
                 <div class="currency_output">
-                    <p>Score</p>
+                    <p id="result"></p>
                 </div>
             </div>
             <div class="margin">
@@ -66,6 +66,7 @@
 
     </div>
     <!-- <footer></footer> -->
+    <script src="/js/currency_codes.js"></script>
     <script src="/js/main.js"></script>
 </body>
 

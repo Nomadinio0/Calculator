@@ -82,11 +82,13 @@ body {
 					margin: 20px 0;
 					i {
 						width: 30px;
-						height: 30px;
+						// height: 30px;
+						cursor: pointer;
 					}
 					select {
 						width: 100px;
-						height: 30px;
+						height: 36px;
+						border-radius: 5px;
 					}
 				}
 
@@ -97,6 +99,7 @@ body {
 					background-color: #ddfbd2;
 					border: none;
 					border-radius: 10px;
+					cursor: pointer;
 				}
 
 				&_output {
@@ -116,9 +119,6 @@ body {
 					justify-content: space-around;
 					text-align: center;
 
-					&_box {
-						// width: 25%;
-					}
 				}
 			}
 
