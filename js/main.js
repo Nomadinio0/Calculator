@@ -4,18 +4,6 @@ const selectTo = document.getElementById('to')
 const submitBtn = document.querySelector('#submit_button')
 const swapBtn = document.querySelector('#swap_button')
 
-// function currencies() {
-// 	fetch(currencies_URL)
-// 		.then(res => res.json())
-// 		.then(data => {
-// 			// const option = document.createElement('option')
-// 			// option.value = data.conversion_rates
-// 			// console.log(option)
-// 			console.log(data.supported_codes)
-// 		})
-// 		.catch(err => console.log(err))
-// }
-
 currencies.forEach(currency => {
 	const option = document.createElement('option')
 	option.value = currency
