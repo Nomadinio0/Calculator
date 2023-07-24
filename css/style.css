@@ -45,16 +45,16 @@ body .container .content {
   height: 500px;
 }
 body .container .content .tab_title {
-  padding: 20px 0;
+  margin: 40px 0;
   font-size: 36px;
 }
 body .container .content .currency {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
-  height: 90%;
+  height: 100%;
 }
 body .container .content .currency_input {
   font-size: 24px;
@@ -97,6 +97,7 @@ body .container .content .currency button {
   cursor: pointer;
 }
 body .container .content .currency_output {
+  margin: 40px 0;
   height: 80px;
   width: 350px;
   border-radius: 20px;
