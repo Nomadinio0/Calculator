@@ -48,4 +48,4 @@ let convert = () => {
 console.log(submitBtn)
 submitBtn.addEventListener('click', convert)
 swapBtn.addEventListener('click', swap)
-window.addEventListener('load', convert)
+// window.addEventListener('load', convert)

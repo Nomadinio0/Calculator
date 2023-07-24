@@ -51,10 +51,10 @@ body .container .content .tab_title {
 body .container .content .currency {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 80%;
+  height: 90%;
 }
 body .container .content .currency_input {
   font-size: 24px;
@@ -63,8 +63,10 @@ body .container .content .currency_input p {
   padding: 10px 0;
 }
 body .container .content .currency_input input {
-  height: 36px;
+  padding: 0 10px;
+  height: 40px;
   width: 250px;
+  font-size: 16px;
   border-radius: 10px;
   border: none;
 }
@@ -76,6 +78,7 @@ body .container .content .currency_select i {
   cursor: pointer;
 }
 body .container .content .currency_select select {
+  padding: 0 10px;
   width: 100px;
   height: 36px;
   border-radius: 5px;
@@ -84,13 +87,26 @@ body .container .content .currency button {
   width: 250px;
   height: 40px;
   text-transform: uppercase;
+  font-family: "Tektur", cursive;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
   background-color: #ddfbd2;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
 body .container .content .currency_output {
-  width: 250px;
+  height: 80px;
+  width: 350px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+body .container .content .currency_output p {
+  text-align: center;
+  line-height: 80px;
+  font-size: 20px;
+  font-weight: bold;
 }
 body .container .content .margin h2 {
   padding: 25px 0;
