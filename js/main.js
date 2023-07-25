@@ -38,14 +38,15 @@ let convert = () => {
 				let fromExchangeRate = data.conversion_rates[fromValue]
 				let toExchangeRate = data.conversion_rates[toValue]
 				const convertedAmount = (amount / fromExchangeRate) * toExchangeRate
+				result.classList.remove('invalid')
 				result.innerHTML = `${amount} ${fromValue} = ${convertedAmount.toFixed(2)} ${toValue}`
 			})
 	} else {
-		result.innerHTML = 'Please fill the input value'
+		result.innerHTML = 'Please fill the input value!'
+		result.classList.add('invalid')
 	}
 }
 
 console.log(submitBtn)
 submitBtn.addEventListener('click', convert)
 swapBtn.addEventListener('click', swap)
-// window.addEventListener('load', convert)

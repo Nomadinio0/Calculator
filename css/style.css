@@ -109,6 +109,9 @@ body .container .content .currency_output p {
   font-size: 20px;
   font-weight: bold;
 }
+body .container .content .currency_output .invalid {
+  color: red;
+}
 body .container .content .margin h2 {
   padding: 25px 0;
   text-align: center;
