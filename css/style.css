@@ -123,6 +123,14 @@ body .container .content .margin_rates {
   justify-content: space-around;
   text-align: center;
 }
+body .container .content .margin_rates_box {
+  padding: 5px 0;
+  width: 20%;
+  background-color: #fff;
+}
+body .container .content .margin_rates_box .rate {
+  font-weight: bold;
+}
 body .container .content .logistics {
   display: none;
 }

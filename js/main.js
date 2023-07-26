@@ -8,6 +8,10 @@ const marginTab = document.querySelector('.marginTab')
 const logisticsTab = document.querySelector('.logisticsTab')
 const contentBox = document.querySelector('.content')
 
+const valueEur = document.querySelector('.value_eur')
+const valueUsd = document.querySelector('.value_usd')
+const valueGbp = document.querySelector('.value_gbp')
+
 function deleteActiveTab() {
 	let activeTabTitle = document.querySelector('.activeTab')
 	activeTabTitle.classList.remove('activeTab')
@@ -61,6 +65,18 @@ let swap = () => {
 	selectFrom.value = temporaryValue
 }
 
+let loadRates = () => {
+	fetch(API_URL).then(res => res.json())
+	.then(data => { 
+		let val_EUR = (1 / data.conversion_rates['EUR'])
+		let val_USD = (1 / data.conversion_rates['USD'])
+		let val_GBP = (1 / data.conversion_rates['GBP'])
+		valueEur.innerHTML = val_EUR.toFixed(2) + ' PLN'
+		valueUsd.innerHTML = val_USD.toFixed(2) + ' PLN'
+		valueGbp.innerHTML = val_GBP.toFixed(2) + ' PLN'
+	})
+}
+
 let convert = () => {
 	const amount = document.getElementById('amount').value
 	const fromValue = selectFrom.value
@@ -75,12 +91,14 @@ let convert = () => {
 				const convertedAmount = (amount / fromExchangeRate) * toExchangeRate
 				result.classList.remove('invalid')
 				result.innerHTML = `${amount} ${fromValue} = ${convertedAmount.toFixed(2)} ${toValue}`
+
+
 			})
 	} else {
 		result.innerHTML = 'Please fill the input value!'
 		result.classList.add('invalid')
 	}
 }
-
+loadRates()
 submitBtn.addEventListener('click', convert)
 swapBtn.addEventListener('click', swap)

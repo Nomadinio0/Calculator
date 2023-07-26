@@ -138,6 +138,17 @@ body {
 					display: flex;
 					justify-content: space-around;
 					text-align: center;
+					
+
+					&_box {
+						padding: 5px 0;
+						width: 20%;
+						background-color: #fff;
+
+						.rate {
+							font-weight: bold;
+						}
+					}
 				}
 			}
 
