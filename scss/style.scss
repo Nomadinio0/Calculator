@@ -41,7 +41,7 @@ body {
 				}
 			}
 
-			.active {
+			.activeTab {
 				background: linear-gradient(0deg, rgba(107, 127, 215, 1) 80%, #ddfbd2 100%);
 				color: #ddfbd2;
 			}
@@ -53,10 +53,12 @@ body {
 			.tab_title {
 				margin: 40px 0;
 				font-size: 36px;
+				text-align: center;
+				text-transform: uppercase;
 			}
 
 			.currency {
-				display: flex;
+				display: none;
 				flex-direction: column;
 				justify-content: flex-start;
 				align-items: center;
@@ -84,7 +86,6 @@ body {
 					margin: 20px 0;
 					i {
 						width: 30px;
-						// height: 30px;
 						cursor: pointer;
 					}
 					select {
@@ -130,11 +131,8 @@ body {
 			}
 
 			.margin {
-				h2 {
-					padding: 25px 0;
-					text-align: center;
-					text-transform: uppercase;
-				}
+				display: none;
+				flex-direction: column;
 
 				&_rates {
 					display: flex;
@@ -143,12 +141,12 @@ body {
 				}
 			}
 
-			.margin {
+			.logistics {
 				display: none;
 			}
 
-			.logistics {
-				display: none;
+			.active {
+				display: flex;
 			}
 		}
 	}

@@ -3,6 +3,41 @@ const selectFrom = document.getElementById('from')
 const selectTo = document.getElementById('to')
 const submitBtn = document.querySelector('#submit_button')
 const swapBtn = document.querySelector('#swap_button')
+const currencyTab = document.querySelector('.currencyTab')
+const marginTab = document.querySelector('.marginTab')
+const logisticsTab = document.querySelector('.logisticsTab')
+const contentBox = document.querySelector('.content')
+
+function deleteActiveTab() {
+	let activeTabTitle = document.querySelector('.activeTab')
+	activeTabTitle.classList.remove('activeTab')
+}
+
+function deleteActiveContent() {
+	let activeContent = contentBox.querySelector('.active')
+	activeContent.classList.remove('active')
+}
+
+marginTab.addEventListener('click', e => {
+	deleteActiveTab()
+	deleteActiveContent()
+	e.target.classList.add('activeTab')
+	contentBox.querySelector('.margin').classList.add('active')
+})
+
+currencyTab.addEventListener('click', e => {
+	deleteActiveTab()
+	deleteActiveContent()
+	e.target.classList.add('activeTab')
+	contentBox.querySelector('.currency').classList.add('active')
+})
+
+logisticsTab.addEventListener('click', e => {
+	deleteActiveTab()
+	deleteActiveContent()
+	e.target.classList.add('activeTab')
+	contentBox.querySelector('.logistics').classList.add('active')
+})
 
 currencies.forEach(currency => {
 	const option = document.createElement('option')
@@ -47,6 +82,5 @@ let convert = () => {
 	}
 }
 
-console.log(submitBtn)
 submitBtn.addEventListener('click', convert)
 swapBtn.addEventListener('click', swap)

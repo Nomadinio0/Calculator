@@ -37,7 +37,7 @@ body .container .menu_tab:hover {
   color: #ddfbd2;
   cursor: pointer;
 }
-body .container .menu .active {
+body .container .menu .activeTab {
   background: linear-gradient(0deg, rgb(107, 127, 215) 80%, #ddfbd2 100%);
   color: #ddfbd2;
 }
@@ -47,9 +47,11 @@ body .container .content {
 body .container .content .tab_title {
   margin: 40px 0;
   font-size: 36px;
+  text-align: center;
+  text-transform: uppercase;
 }
 body .container .content .currency {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -112,19 +114,18 @@ body .container .content .currency_output p {
 body .container .content .currency_output .invalid {
   color: red;
 }
-body .container .content .margin h2 {
-  padding: 25px 0;
-  text-align: center;
-  text-transform: uppercase;
+body .container .content .margin {
+  display: none;
+  flex-direction: column;
 }
 body .container .content .margin_rates {
   display: flex;
   justify-content: space-around;
   text-align: center;
 }
-body .container .content .margin {
-  display: none;
-}
 body .container .content .logistics {
   display: none;
+}
+body .container .content .active {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
