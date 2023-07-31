@@ -114,24 +114,24 @@ body .container .content .currency_output p {
 body .container .content .currency_output .invalid {
   color: red;
 }
-body .container .content .margin {
+body .container .content .logistics {
   display: none;
   flex-direction: column;
 }
-body .container .content .margin_rates {
+body .container .content .logistics_rates {
   display: flex;
   justify-content: space-around;
   text-align: center;
 }
-body .container .content .margin_rates_box {
+body .container .content .logistics_rates_box {
   padding: 5px 0;
   width: 20%;
   background-color: #fff;
 }
-body .container .content .margin_rates_box .rate {
+body .container .content .logistics_rates_box .rate {
   font-weight: bold;
 }
-body .container .content .logistics {
+body .container .content .margin {
   display: none;
 }
 body .container .content .active {
