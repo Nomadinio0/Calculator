@@ -50,6 +50,61 @@ body .container .content .tab_title {
   text-align: center;
   text-transform: uppercase;
 }
+body .container .content .profit {
+  display: none;
+  flex-direction: row;
+  padding: 40px 0;
+  height: 100%;
+}
+body .container .content .profit .margin,
+body .container .content .profit .markup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+body .container .content .profit .margin_box,
+body .container .content .profit .markup_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container .content .profit .margin_box_buy, body .container .content .profit .margin_box_retail, body .container .content .profit .margin_box_vat, body .container .content .profit .margin_box_output,
+body .container .content .profit .markup_box_buy,
+body .container .content .profit .markup_box_retail,
+body .container .content .profit .markup_box_vat,
+body .container .content .profit .markup_box_output {
+  padding: 0 5px;
+  height: 40px;
+  width: 120px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  line-height: 40px;
+}
+body .container .content .profit .margin_box_vat,
+body .container .content .profit .markup_box_vat {
+  overflow: hidden;
+  width: 80px;
+}
+body .container .content .profit .margin_box_output,
+body .container .content .profit .markup_box_output {
+  height: 50px;
+  background-color: #ddfbd2;
+  font-weight: bold;
+}
+body .container .content .profit .margin_box p,
+body .container .content .profit .markup_box p {
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+body .container .content .profit .margin_box .result,
+body .container .content .profit .markup_box .result {
+  font-weight: bold;
+}
 body .container .content .currency {
   display: none;
   flex-direction: column;
@@ -130,9 +185,6 @@ body .container .content .logistics_rates_box {
 }
 body .container .content .logistics_rates_box .rate {
   font-weight: bold;
-}
-body .container .content .margin {
-  display: none;
 }
 body .container .content .active {
   display: flex;

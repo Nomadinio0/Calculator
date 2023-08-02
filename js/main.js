@@ -4,7 +4,7 @@ const selectTo = document.getElementById('to')
 const submitBtn = document.querySelector('#submit_button')
 const swapBtn = document.querySelector('#swap_button')
 const currencyTab = document.querySelector('.currencyTab')
-const marginTab = document.querySelector('.marginTab')
+const profitTab = document.querySelector('.profitTab')
 const logisticsTab = document.querySelector('.logisticsTab')
 const contentBox = document.querySelector('.content')
 
@@ -22,11 +22,11 @@ function deleteActiveContent() {
 	activeContent.classList.remove('active')
 }
 
-marginTab.addEventListener('click', e => {
+profitTab.addEventListener('click', e => {
 	deleteActiveTab()
 	deleteActiveContent()
 	e.target.classList.add('activeTab')
-	contentBox.querySelector('.margin').classList.add('active')
+	contentBox.querySelector('.profit').classList.add('active')
 })
 
 currencyTab.addEventListener('click', e => {
@@ -66,15 +66,16 @@ let swap = () => {
 }
 
 let loadRates = () => {
-	fetch(API_URL).then(res => res.json())
-	.then(data => { 
-		let val_EUR = (1 / data.conversion_rates['EUR'])
-		let val_USD = (1 / data.conversion_rates['USD'])
-		let val_GBP = (1 / data.conversion_rates['GBP'])
-		valueEur.innerHTML = val_EUR.toFixed(2) + ' PLN'
-		valueUsd.innerHTML = val_USD.toFixed(2) + ' PLN'
-		valueGbp.innerHTML = val_GBP.toFixed(2) + ' PLN'
-	})
+	fetch(API_URL)
+		.then(res => res.json())
+		.then(data => {
+			let val_EUR = 1 / data.conversion_rates['EUR']
+			let val_USD = 1 / data.conversion_rates['USD']
+			let val_GBP = 1 / data.conversion_rates['GBP']
+			valueEur.innerHTML = val_EUR.toFixed(2) + ' PLN'
+			valueUsd.innerHTML = val_USD.toFixed(2) + ' PLN'
+			valueGbp.innerHTML = val_GBP.toFixed(2) + ' PLN'
+		})
 }
 
 let convert = () => {
@@ -89,14 +90,12 @@ let convert = () => {
 				let fromExchangeRate = data.conversion_rates[fromValue]
 				let toExchangeRate = data.conversion_rates[toValue]
 				const convertedAmount = (amount / fromExchangeRate) * toExchangeRate
-				result.classList.remove('invalid')
-				result.innerHTML = `${amount} ${fromValue} = ${convertedAmount.toFixed(2)} ${toValue}`
-
-
+				currency_output_result.classList.remove('invalid')
+				currency_output_result.innerHTML = `${amount} ${fromValue} = ${convertedAmount.toFixed(2)} ${toValue}`
 			})
 	} else {
-		result.innerHTML = 'Please fill the input value!'
-		result.classList.add('invalid')
+		currency_output_result.innerHTML = 'Please fill the input value!'
+		currency_output_result.classList.add('invalid')
 	}
 }
 loadRates()

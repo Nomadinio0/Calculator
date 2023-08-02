@@ -16,24 +16,69 @@
     <div class="container">
         <div class="menu">
             <div class="menu_tab ">
-                <p class="marginTab">Margin</p>
+                <p class="profitTab activeTab">Profit</p>
             </div>
             <div class="menu_tab">
-                <p class="currencyTab activeTab">Currency</p>
+                <p class="currencyTab ">Currency</p>
             </div>
             <div class="menu_tab">
                 <p class="logisticsTab">Logistics</p>
             </div>
         </div>
         <div class="content">
-            <div class="margin ">
+            <div class="profit active">
+                <div class="margin">
+                    <h2>Margin</h2>
+                    <div class="margin_box">
+                        <p>Net Buy Price</p>
+                        <input name="buy" class="margin_box_buy" type="number">
+                    </div>
+                    <div class="margin_box">
+                        <p>VAT</p>
+                        <select class="margin_box_vat" name="vat">
+                            <option value="0">0%</option>
+                            <option value="0.05">5%</option>
+                            <option value="0.08">8%</option>
+                            <option value="0.23">23%</option>
+                        </select>
+                    </div>
+                    <div class="margin_box">
+                        <p>Retail price</p>
+                        <input name="retail" class="margin_box_retail" type="number""></div>
+                    <div class=" margin_box">
+                        <p class="result">Result %</p>
+                        <p class="margin_box_output"></p>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h2>Markup</h2>
+                    <div class="markup_box">
+                        <p>Net Buy Price</p>
+                        <input name="buy" class="markup_box_buy" type="number">
+                    </div>
+                    <div class="markup_box">
+                        <p>VAT</p>
+                        <select class="markup_box_vat" name="vat">
+                            <option value="0">0%</option>
+                            <option value="0.05">5%</option>
+                            <option value="0.08">8%</option>
+                            <option value="0.23">23%</option>
+                        </select>
+                    </div>
+                    <div class="markup_box">
+                        <p>Retail price</p>
+                        <input name="retail" class="markup_box_retail" type="number""></div>
+                <div class=" markup_box">
+                        <p class="result">Result %</p>
+                        <p class="markup_box_output"></p>
+                    </div>
+                </div>
 
             </div>
-            <div class="currency active">
+            <div class="currency ">
                 <h2 class="tab_title">Currency converter</h2>
                 <div class="currency_input">
-                    <!-- <p>Amount</p> -->
-                    <input type="text" name="amount" id="amount" placeholder="Amount">
+                    <input type="number" name="amount" id="amount" placeholder="Amount">
                 </div>
                 <div class="currency_select">
                     <select name="from" id="from"></select>
@@ -44,7 +89,7 @@
                     <button id="submit_button">Convert</button>
                 </div>
                 <div class="currency_output">
-                    <p id="result"></p>
+                    <p id="currency_output_result"></p>
                 </div>
             </div>
             <div class="logistics ">

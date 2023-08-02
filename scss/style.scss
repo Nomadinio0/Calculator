@@ -57,6 +57,63 @@ body {
 				text-transform: uppercase;
 			}
 
+			.profit {
+				display: none;
+				flex-direction: row;
+				padding: 40px 0;
+				height: 100%;
+
+				.margin,
+				.markup {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+					align-items: center;
+					width: 50%;
+
+					&_box {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+
+						&_buy,
+						&_retail,
+						&_vat,
+						&_output {
+							padding: 0 5px;
+							height: 40px;
+							width: 120px;
+							font-size: 16px;
+							border-radius: 10px;
+							border: none;
+							text-align: center;
+							line-height: 40px;
+						}
+
+						&_vat {
+							overflow: hidden;
+							width: 80px;
+						}
+
+						&_output {
+							height: 50px;
+							background-color: #ddfbd2;
+							font-weight: bold;
+						}
+
+						p {
+							padding-bottom: 5px;
+							font-size: 20px;
+						}
+
+						.result {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+
 			.currency {
 				display: none;
 				flex-direction: column;
@@ -138,7 +195,6 @@ body {
 					display: flex;
 					justify-content: space-around;
 					text-align: center;
-					
 
 					&_box {
 						padding: 5px 0;
@@ -150,10 +206,6 @@ body {
 						}
 					}
 				}
-			}
-
-			.margin {
-				display: none;
 			}
 
 			.active {
