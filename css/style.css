@@ -27,6 +27,7 @@ body .container .menu {
   letter-spacing: 2px;
   line-height: 50px;
   font-weight: bold;
+  border-bottom: 1px solid #4c2a85;
 }
 body .container .menu_tab {
   height: 100%;
@@ -52,58 +53,49 @@ body .container .content .tab_title {
 }
 body .container .content .profit {
   display: none;
-  flex-direction: row;
-  padding: 40px 0;
+  flex-direction: column;
   height: 100%;
 }
-body .container .content .profit .margin,
-body .container .content .profit .markup {
+body .container .content .profit_inputBox, body .container .content .profit_outputBox {
+  padding: 30px 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
-  align-items: center;
-  width: 50%;
+  text-align: center;
 }
-body .container .content .profit .margin_box,
-body .container .content .profit .markup_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+body .container .content .profit_inputBox p, body .container .content .profit_outputBox p {
+  font-size: 20px;
+  padding-bottom: 5px;
 }
-body .container .content .profit .margin_box_buy, body .container .content .profit .margin_box_retail, body .container .content .profit .margin_box_vat, body .container .content .profit .margin_box_output,
-body .container .content .profit .markup_box_buy,
-body .container .content .profit .markup_box_retail,
-body .container .content .profit .markup_box_vat,
-body .container .content .profit .markup_box_output {
-  padding: 0 5px;
+body .container .content .profit_inputBox .buyPriceBox input,
+body .container .content .profit_inputBox .buyPriceBox select,
+body .container .content .profit_inputBox .vatSelectBox input,
+body .container .content .profit_inputBox .vatSelectBox select,
+body .container .content .profit_inputBox .retailPriceBox input,
+body .container .content .profit_inputBox .retailPriceBox select {
   height: 40px;
   width: 120px;
-  font-size: 16px;
   border-radius: 10px;
   border: none;
+  font-size: 16px;
+  font-weight: bold;
   text-align: center;
-  line-height: 40px;
 }
-body .container .content .profit .margin_box_vat,
-body .container .content .profit .markup_box_vat {
-  overflow: hidden;
-  width: 80px;
+body .container .content .profit_inputBox .buyPriceBox p,
+body .container .content .profit_inputBox .vatSelectBox p,
+body .container .content .profit_inputBox .retailPriceBox p {
+  text-transform: uppercase;
 }
-body .container .content .profit .margin_box_output,
-body .container .content .profit .markup_box_output {
-  height: 50px;
+body .container .content .profit_inputBox .buyPriceBox select,
+body .container .content .profit_inputBox .vatSelectBox select,
+body .container .content .profit_inputBox .retailPriceBox select {
+  width: 70px;
+}
+body .container .content .profit_outputBox .output {
+  height: 60px;
+  width: 140px;
+  border-radius: 10px;
   background-color: #ddfbd2;
-  font-weight: bold;
-}
-body .container .content .profit .margin_box p,
-body .container .content .profit .markup_box p {
-  padding-bottom: 5px;
-  font-size: 20px;
-}
-body .container .content .profit .margin_box .result,
-body .container .content .profit .markup_box .result {
-  font-weight: bold;
 }
 body .container .content .currency {
   display: none;
@@ -179,9 +171,11 @@ body .container .content .logistics_rates {
   text-align: center;
 }
 body .container .content .logistics_rates_box {
-  padding: 5px 0;
+  padding: 10px 0;
   width: 20%;
   background-color: #fff;
+  border-radius: 10px;
+  background-color: #ddfbd2;
 }
 body .container .content .logistics_rates_box .rate {
   font-weight: bold;
