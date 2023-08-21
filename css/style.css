@@ -9,13 +9,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #4c2a85;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   font-family: "Tektur", cursive;
 }
 body .container {
   width: 550px;
   height: 550px;
-  background-color: #6b7fd7;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 }
 body .container .menu {
   display: flex;
@@ -27,7 +27,6 @@ body .container .menu {
   letter-spacing: 2px;
   line-height: 50px;
   font-weight: bold;
-  border-bottom: 1px solid #4c2a85;
 }
 body .container .menu_tab {
   height: 100%;
@@ -35,12 +34,11 @@ body .container .menu_tab {
   transition: color 0.3s linear;
 }
 body .container .menu_tab:hover {
-  color: #ddfbd2;
+  color: #008bdb;
   cursor: pointer;
 }
 body .container .menu .activeTab {
-  background: linear-gradient(0deg, rgb(107, 127, 215) 80%, #ddfbd2 100%);
-  color: #ddfbd2;
+  color: #008bdb;
 }
 body .container .content {
   height: 500px;
@@ -54,10 +52,12 @@ body .container .content .tab_title {
 body .container .content .profit {
   display: none;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 body .container .content .profit_inputBox, body .container .content .profit_outputBox {
   padding: 30px 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -91,11 +91,24 @@ body .container .content .profit_inputBox .vatSelectBox select,
 body .container .content .profit_inputBox .retailPriceBox select {
   width: 70px;
 }
+body .container .content .profit button {
+  width: 250px;
+  height: 40px;
+  text-transform: uppercase;
+  font-family: "Tektur", cursive;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color: #6cb4df;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
 body .container .content .profit_outputBox .output {
   height: 60px;
   width: 140px;
   border-radius: 10px;
-  background-color: #ddfbd2;
+  background-color: #6cb4df;
 }
 body .container .content .currency {
   display: none;
@@ -127,10 +140,13 @@ body .container .content .currency_select i {
   cursor: pointer;
 }
 body .container .content .currency_select select {
-  padding: 0 10px;
-  width: 100px;
-  height: 36px;
-  border-radius: 5px;
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 body .container .content .currency button {
   width: 250px;
@@ -140,7 +156,7 @@ body .container .content .currency button {
   font-size: 16px;
   letter-spacing: 2px;
   font-weight: bold;
-  background-color: #ddfbd2;
+  background-color: #6cb4df;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -175,7 +191,7 @@ body .container .content .logistics_rates_box {
   width: 20%;
   background-color: #fff;
   border-radius: 10px;
-  background-color: #ddfbd2;
+  background-color: #6cb4df;
 }
 body .container .content .logistics_rates_box .rate {
   font-weight: bold;

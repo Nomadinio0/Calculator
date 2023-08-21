@@ -11,13 +11,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-color: #4c2a85;
+
+	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 	font-family: 'Tektur', cursive;
 
 	.container {
 		width: 550px;
 		height: 550px;
-		background-color: #6b7fd7;
+		background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 
 		.menu {
 			display: flex;
@@ -29,7 +30,6 @@ body {
 			letter-spacing: 2px;
 			line-height: 50px;
 			font-weight: bold;
-			border-bottom: 1px solid #4c2a85;
 
 			&_tab {
 				height: 100%;
@@ -37,14 +37,13 @@ body {
 				transition: color 0.3s linear;
 
 				&:hover {
-					color: #ddfbd2;
+					color: #008bdb;
 					cursor: pointer;
 				}
 			}
 
 			.activeTab {
-				background: linear-gradient(0deg, rgba(107, 127, 215, 1) 80%, #ddfbd2 100%);
-				color: #ddfbd2;
+				color: #008bdb;
 			}
 		}
 
@@ -61,11 +60,13 @@ body {
 			.profit {
 				display: none;
 				flex-direction: column;
+				align-items: center;
 				height: 100%;
 
 				&_inputBox,
 				&_outputBox {
 					padding: 30px 0;
+					width: 100%;
 					display: flex;
 					flex-direction: row;
 					justify-content: space-around;
@@ -102,12 +103,26 @@ body {
 					}
 				}
 
+				button {
+					width: 250px;
+					height: 40px;
+					text-transform: uppercase;
+					font-family: 'Tektur', cursive;
+					font-size: 16px;
+					letter-spacing: 2px;
+					font-weight: bold;
+					background-color: #6cb4df;
+					border: none;
+					border-radius: 10px;
+					cursor: pointer;
+				}
+
 				&_outputBox {
 					.output {
 						height: 60px;
 						width: 140px;
 						border-radius: 10px;
-						background-color: #ddfbd2;
+						background-color: #6cb4df;
 					}
 				}
 			}
@@ -144,10 +159,13 @@ body {
 						cursor: pointer;
 					}
 					select {
-						padding: 0 10px;
-						width: 100px;
-						height: 36px;
-						border-radius: 5px;
+						height: 40px;
+						width: 70px;
+						border-radius: 10px;
+						border: none;
+						font-size: 16px;
+						font-weight: bold;
+						text-align: center;
 					}
 				}
 
@@ -159,7 +177,7 @@ body {
 					font-size: 16px;
 					letter-spacing: 2px;
 					font-weight: bold;
-					background-color: #ddfbd2;
+					background-color: #6cb4df;
 					border: none;
 					border-radius: 10px;
 					cursor: pointer;
@@ -199,7 +217,7 @@ body {
 						width: 20%;
 						background-color: #fff;
 						border-radius: 10px;
-						background-color: #ddfbd2;
+						background-color: #6cb4df;
 
 						.rate {
 							font-weight: bold;

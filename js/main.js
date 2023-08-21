@@ -2,11 +2,17 @@ const API_URL = 'https://v6.exchangerate-api.com/v6/72b705c9060d09cbcebf52e7/lat
 const selectFrom = document.getElementById('from')
 const selectTo = document.getElementById('to')
 const submitBtn = document.querySelector('#submit_button')
+const submitProfitBtn = document.querySelector('#submit_profit_button')
 const swapBtn = document.querySelector('#swap_button')
 const currencyTab = document.querySelector('.currencyTab')
 const profitTab = document.querySelector('.profitTab')
 const logisticsTab = document.querySelector('.logisticsTab')
 const contentBox = document.querySelector('.content')
+const marginOutput = document.querySelector('#marginOutput')
+const markupOutput = document.querySelector('#markupOutput')
+const netPrice = document.querySelector('.buyPrice')
+const vatValue = document.querySelector('.vatSelect')
+const retailPrice = document.querySelector('.retailPrice')
 
 const valueEur = document.querySelector('.value_eur')
 const valueUsd = document.querySelector('.value_usd')
@@ -98,6 +104,25 @@ let convert = () => {
 		currency_output_result.classList.add('invalid')
 	}
 }
+
+let profit = () => {
+	const markupScore = retailPrice.value / vatValue.value / netPrice.value - 1
+	// const marginScore = ((retailPrice.value - netPrice.value * vatValue.value) / retailPrice.value) * 100
+	markupOutput.innerHTML = markupScore.toLocaleString('en', {
+		style: 'percent',
+		minimumFractionDigits: 2,
+		maximumFractionDigits: 2,
+	})
+	marginOutput.innerHTML = marginScore.toLocaleString('en', {
+		style: 'percent',
+		minimumFractionDigits: 2,
+		maximumFractionDigits: 2,
+	})
+
+	console.log(vatValue.value)
+}
+
 loadRates()
 submitBtn.addEventListener('click', convert)
 swapBtn.addEventListener('click', swap)
+submitProfitBtn.addEventListener('click', profit)
