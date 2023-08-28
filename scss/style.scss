@@ -11,7 +11,6 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-
 	background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 	font-family: 'Tektur', cursive;
 
@@ -57,6 +56,18 @@ body {
 				text-transform: uppercase;
 			}
 
+			input,
+			select {
+				height: 40px;
+				width: 120px;
+				border-radius: 10px;
+				border: none;
+				font-size: 16px;
+				font-weight: bold;
+				text-align: center;
+				appearance: none;
+			}
+
 			.profit {
 				display: none;
 				flex-direction: column;
@@ -71,28 +82,12 @@ body {
 					flex-direction: row;
 					justify-content: space-around;
 					text-align: center;
-
-					p {
-						font-size: 20px;
-						padding-bottom: 5px;
-					}
 				}
 
 				&_inputBox {
 					.buyPriceBox,
 					.vatSelectBox,
 					.retailPriceBox {
-						input,
-						select {
-							height: 40px;
-							width: 120px;
-							border-radius: 10px;
-							border: none;
-							font-size: 16px;
-							font-weight: bold;
-							text-align: center;
-						}
-
 						p {
 							text-transform: uppercase;
 						}
@@ -121,6 +116,9 @@ body {
 					.output {
 						height: 60px;
 						width: 140px;
+						line-height: 60px;
+						font-size: 20px;
+						font-weight: bold;
 						border-radius: 10px;
 						background-color: #6cb4df;
 					}
@@ -157,15 +155,6 @@ body {
 					i {
 						width: 30px;
 						cursor: pointer;
-					}
-					select {
-						height: 40px;
-						width: 70px;
-						border-radius: 10px;
-						border: none;
-						font-size: 16px;
-						font-weight: bold;
-						text-align: center;
 					}
 				}
 

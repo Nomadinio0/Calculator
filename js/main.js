@@ -10,7 +10,7 @@ const logisticsTab = document.querySelector('.logisticsTab')
 const contentBox = document.querySelector('.content')
 const marginOutput = document.querySelector('#marginOutput')
 const markupOutput = document.querySelector('#markupOutput')
-const netPrice = document.querySelector('.buyPrice')
+const buyPrice = document.querySelector('.buyPrice')
 const vatValue = document.querySelector('.vatSelect')
 const retailPrice = document.querySelector('.retailPrice')
 
@@ -106,8 +106,10 @@ let convert = () => {
 }
 
 let profit = () => {
-	const markupScore = retailPrice.value / vatValue.value / netPrice.value - 1
-	// const marginScore = ((retailPrice.value - netPrice.value * vatValue.value) / retailPrice.value) * 100
+	let retailNetto = retailPrice.value / vatValue.value
+
+	const markupScore = (retailNetto - buyPrice.value) / buyPrice.value
+	const marginScore = (retailNetto - buyPrice.value) / retailNetto
 	markupOutput.innerHTML = markupScore.toLocaleString('en', {
 		style: 'percent',
 		minimumFractionDigits: 2,
@@ -118,8 +120,6 @@ let profit = () => {
 		minimumFractionDigits: 2,
 		maximumFractionDigits: 2,
 	})
-
-	console.log(vatValue.value)
 }
 
 loadRates()

@@ -49,6 +49,19 @@ body .container .content .tab_title {
   text-align: center;
   text-transform: uppercase;
 }
+body .container .content input,
+body .container .content select {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
 body .container .content .profit {
   display: none;
   flex-direction: column;
@@ -61,24 +74,6 @@ body .container .content .profit_inputBox, body .container .content .profit_outp
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  text-align: center;
-}
-body .container .content .profit_inputBox p, body .container .content .profit_outputBox p {
-  font-size: 20px;
-  padding-bottom: 5px;
-}
-body .container .content .profit_inputBox .buyPriceBox input,
-body .container .content .profit_inputBox .buyPriceBox select,
-body .container .content .profit_inputBox .vatSelectBox input,
-body .container .content .profit_inputBox .vatSelectBox select,
-body .container .content .profit_inputBox .retailPriceBox input,
-body .container .content .profit_inputBox .retailPriceBox select {
-  height: 40px;
-  width: 120px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
   text-align: center;
 }
 body .container .content .profit_inputBox .buyPriceBox p,
@@ -107,6 +102,9 @@ body .container .content .profit button {
 body .container .content .profit_outputBox .output {
   height: 60px;
   width: 140px;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: bold;
   border-radius: 10px;
   background-color: #6cb4df;
 }
@@ -138,15 +136,6 @@ body .container .content .currency_select {
 body .container .content .currency_select i {
   width: 30px;
   cursor: pointer;
-}
-body .container .content .currency_select select {
-  height: 40px;
-  width: 70px;
-  border-radius: 10px;
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
 }
 body .container .content .currency button {
   width: 250px;
